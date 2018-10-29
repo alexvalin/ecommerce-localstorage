@@ -4,9 +4,9 @@ window.onload = function () {
     if (!x.params.id)
         return window.location = '../';
 
-    var produto = produtosController.get('id', x.params.id);
+    var empresa = empresa.get('id', x.params.id);
 
-    if (!produto)
+    if (!empresa)
         return window.location = '../';
 
     var $txtNome = $('#txtNome');
@@ -14,19 +14,19 @@ window.onload = function () {
     var $txtPreco = $('#txtPreco');
     var $txtCategoria = $('#txtCategoria');
     
-    $txtNome.val(produto.nome);
-    $txtDescricao.val(produto.descricao);
-    $txtPreco.val(produto.preco);
-    $txtCategoria.val(produto.categoria);
+    $txtNome.val(empresa.nome);
+    $txtDescricao.val(empresa.descricao);
+    $txtPreco.val(empresa.preco);
+    $txtCategoria.val(empresa.categoria);
 
     $('#btnSalvar').on('click', () => validacao() && salvar());
 
     function salvar() {
-        produto.nome = $txtNome.val();
-        produto.descricao = $txtDescricao.val();
-        produto.preco = Number.parseFloat($txtPreco.val());
-        produto.categoria = $txtCategoria.val();
-        produtosController.update(produto);
+        empresa.nome = $txtNome.val();
+        empresa.descricao = $txtDescricao.val();
+        empresa.preco = Number.parseFloat($txtPreco.val());
+        empresa.categoria = $txtCategoria.val();
+        empresaController.update(empresa);
         window.location = '../';
     }
 
