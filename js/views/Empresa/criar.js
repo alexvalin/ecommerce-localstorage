@@ -6,12 +6,12 @@ window.onload = function () {
     
     document.getElementById('btnSalvar')
         .addEventListener('click', function (ev) {
-            var empresa = new Empresa({
+            var empresas = new Empresas({
                 nome: $txtNome.val(),
                 descricao: $txtDescricao.val(),
                 preco: $txtPreco.val(),
                 categoria: $txtCategoria.val()
             });
-            empresaController.add(empresa);
+            empresasController.add(empresas);
         });
 }

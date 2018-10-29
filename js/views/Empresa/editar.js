@@ -1,12 +1,12 @@
 window.onload = function () {
     // pegar o identificador de quem quero editar
-    var x = new UrlParams('Produtos/Editar');
+    var x = new UrlParams('Empresas/Editar');
     if (!x.params.id)
         return window.location = '../';
 
-    var empresa = empresa.get('id', x.params.id);
+    var empresas = empresas.get('id', x.params.id);
 
-    if (!empresa)
+    if (!empresas)
         return window.location = '../';
 
     var $txtNome = $('#txtNome');
@@ -14,10 +14,10 @@ window.onload = function () {
     var $txtPreco = $('#txtPreco');
     var $txtCategoria = $('#txtCategoria');
     
-    $txtNome.val(empresa.nome);
-    $txtDescricao.val(empresa.descricao);
-    $txtPreco.val(empresa.preco);
-    $txtCategoria.val(empresa.categoria);
+    $txtNome.val(empresas.nome);
+    $txtDescricao.val(empresas.descricao);
+    $txtPreco.val(empresas.preco);
+    $txtCategoria.val(empresas.categoria);
 
     $('#btnSalvar').on('click', () => validacao() && salvar());
 
