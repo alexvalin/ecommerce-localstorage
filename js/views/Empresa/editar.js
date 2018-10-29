@@ -26,7 +26,7 @@ window.onload = function () {
         empresa.descricao = $txtDescricao.val();
         empresa.preco = Number.parseFloat($txtPreco.val());
         empresa.categoria = $txtCategoria.val();
-        empresaController.update(empresa);
+        empresasController.update(empresas);
         window.location = '../';
     }
 

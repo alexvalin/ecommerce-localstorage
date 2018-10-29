@@ -1,4 +1,4 @@
-function Empresa(o) {
+function Empresas(o) {
     this.id = o.id || guid();
     o = o || {};
     this.nome = o.nome;
@@ -7,4 +7,4 @@ function Empresa(o) {
     this.categoria = o.categoria || "";
 }
 
-var empresaController = controller('empresa', Empresa);
+var empresaController = controller('empresas', Empresas);

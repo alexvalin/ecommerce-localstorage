@@ -1,7 +1,7 @@
 window.onload = function () {
     var table = $('table tbody');
 
-    produtosController.getAll()
+    empresasController.getAll()
         .forEach(addRow);
 
     function addRow(item) {
