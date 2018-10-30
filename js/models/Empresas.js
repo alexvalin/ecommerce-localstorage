@@ -7,4 +7,4 @@ function Empresas(o) {
     this.categoria = o.categoria || "";
 }
 
-var empresaController = controller('empresas', Empresas);
+var empresasController = controller('empresas', Empresas);
