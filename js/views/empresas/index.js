@@ -1,5 +1,5 @@
 window.onload = function () {
-    var table = $('table tbody');
+    var $table = $('table tbody');
 
     empresasController.getAll()
         .forEach(addRow);
