@@ -4,7 +4,7 @@ window.onload = function () {
     if (!x.params.id)
         return window.location = '../';
 
-    var empresas = empresas.get('id', x.params.id);
+    var empresas = empresasController.get('id', x.params.id);
 
     if (!empresas)
         return window.location = '../';
