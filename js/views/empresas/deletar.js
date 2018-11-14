@@ -10,7 +10,8 @@ window.onload = function () {
 
     $('#txtNome').val(empresas.nome);
     $('#txtDescricao').val(empresas.descricao);
-    $('#txtPreco').val(empresas.preco);
+    $('#txtCnpj').val(empresas.cnpj);
+    $('#txtFuncionarios').val(empresas.funcionarios)
     $('#txtCategoria').val(empresas.categoria);
 
     $('#btnSalvar').on('click', function (ev) {

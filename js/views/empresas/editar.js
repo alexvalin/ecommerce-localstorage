@@ -11,12 +11,14 @@ window.onload = function () {
 
     var $txtNome = $('#txtNome');
     var $txtDescricao = $('#txtDescricao');
-    var $txtPreco = $('#txtPreco');
+    var $txtCnpj = $('#txtCnpj');
+    var $txtFuncionarios = $('#txtFuncionarios');
     var $txtCategoria = $('#txtCategoria');
     
     $txtNome.val(empresas.nome);
     $txtDescricao.val(empresas.descricao);
-    $txtPreco.val(empresas.preco);
+    $txtCnpj.val(empresas.cnpj);
+    $txtFuncionarios.val(empresas.funcionarios);
     $txtCategoria.val(empresas.categoria);
 
     $('#btnSalvar').on('click', () => validacao() && salvar());
@@ -24,7 +26,8 @@ window.onload = function () {
     function salvar() {
         empresa.nome = $txtNome.val();
         empresa.descricao = $txtDescricao.val();
-        empresa.preco = Number.parseFloat($txtPreco.val());
+        empresa.cnpj = Number.parseFloat($txtCnpj.val());
+        empresa.funcionarios = Number.parseFloat($txtFuncionarios.val());
         empresa.categoria = $txtCategoria.val();
         empresasController.update(empresas);
         window.location = '../';
@@ -34,7 +37,11 @@ window.onload = function () {
         if (!$txtNome.val())
             return false;
         
-        var p = Number.parseFloat($txtPreco.val());
+        var p = Number.parseFloat($txtCnpj.val());
+        if (isNaN(p) || p < 0)
+            return false;
+        
+            var p = Number.parseFloat($txtFuncionarios.val());
         if (isNaN(p) || p < 0)
             return false;
 

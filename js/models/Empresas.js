@@ -3,7 +3,8 @@ function Empresas(o) {
     o = o || {};
     this.nome = o.nome;
     this.descricao = o.descricao;
-    this.preco = o.preco;
+    this.cnpj = o.cnpj;
+    this.funcionarios = o.funcionarios;
     this.categoria = o.categoria || "";
 }
 

@@ -1,7 +1,8 @@
 window.onload = function () {
     var $txtNome = $('#txtNome');
     var $txtDescricao = $('#txtDescricao');
-    var $txtPreco = $('#txtPreco');
+    var $txtCnpj = $('#txtCnpj');
+    var $txtFuncionarios = $('#txtFuncionarios');
     var $txtCategoria = $('#txtCategoria');
     
     document.getElementById('btnSalvar')
@@ -9,7 +10,8 @@ window.onload = function () {
             var empresas = new Empresas({
                 nome: $txtNome.val(),
                 descricao: $txtDescricao.val(),
-                preco: $txtPreco.val(),
+                cnpj: $txtCnpj.val(),
+                funcionarios: $txtFuncionarios.val(),
                 categoria: $txtCategoria.val()
             });
             empresasController.add(empresas);
