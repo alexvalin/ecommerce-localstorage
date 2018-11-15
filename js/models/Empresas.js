@@ -6,6 +6,7 @@ function Empresas(o) {
     this.cnpj = o.cnpj;
     this.funcionarios = o.funcionarios;
     this.categoria = o.categoria || "";
+    console.log("Empresas: fazendo tal coisa");
 }
 
 var empresasController = controller('empresas', Empresas);
