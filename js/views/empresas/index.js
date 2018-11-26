@@ -8,8 +8,8 @@ window.onload = function () {
         var row = '<tr>';
         row += '<td>' + item.nome + '</td>';
         row += '<td>' + item.categoria + '</td>';
-        row += '<td> R$ ' + item.cnpj + '</td>';
-        row += '<td> R$ ' + item.funcionarios + '</td>';
+        row += '<td>'  + item.cnpj + '</td>';
+        row += '<td>' + item.funcionarios + '</td>';
         row += '<td>';
         row += '<a href="Editar?id=' + item.id + '">Editar</a>';
         row += ' | ';
